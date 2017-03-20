@@ -1,2 +1,2 @@
-from .Car import Car as Car
-from .Person import Person as Person
+from .Car import Car
+from .Person import Person
