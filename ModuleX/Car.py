@@ -1,11 +1,13 @@
-import ModuleX.Person as Person
+MYPY = False
+if MYPY:
+    import ModuleX.Person as Person
+
+
 class Car:
-	def __init__(self, brand:str, owner:Person):
-		self.brand = brand # type:Str
-		self.owner = owner # type:Person
 
-	def get_owner(self)-> Person:
-		return self.Owner
+    def __init__(self, brand: str, owner: 'Person.Person') -> None:
+        self.brand = brand  # type: str
+        self.owner = owner  # type: Person.Person
 
-if __name__ == '__main__':
-	pass
+    def get_owner(self) -> 'Person.Person':
+        return self.owner
